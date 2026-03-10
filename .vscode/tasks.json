@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile C++",
+      "type": "shell",
+      "command": "g++-15",
+      "args": ["demo.cpp", "-std=c++17", "-o", "main"],
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run C++ with input/output",
+      "type": "shell",
+      "command": "bash",
+      "args": ["-c", "./main < input.txt > output.txt"],
+      "dependsOn": "Compile C++",
+      "problemMatcher": []
+    },
+    {
+      "label": "Build and Run",
+      "dependsOn": "Run C++ with input/output",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}

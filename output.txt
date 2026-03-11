@@ -1,3 +1,3 @@
-1 2
-1 3 2
-3 3
+Size of vector is:12
+Vector v is: 50 50 1 2 10 300 10 10 10 30 50 60 
+Is the vector empty : 0
